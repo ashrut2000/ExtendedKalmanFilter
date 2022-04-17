@@ -124,7 +124,6 @@ class ExtendedKalmanFilter():
         new_d = d
 
         self.x = np.array([new_x, new_y, new_h, new_r, new_d]).reshape(-1, 1)
-        #self.x += np.array([1e-7 for i in range(5)]).reshape(-1, 1)
         self.p = f.dot(self.p).dot(f.transpose())+q
 
 
